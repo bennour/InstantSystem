@@ -50,7 +50,7 @@ public class ParkingControllerTest {
     }
 
     // -------------------------------------
-    // Tests cases : GET /parking/list
+    // Tests cases : GET /parkings
     // -------------------------------------
 
     @Test
@@ -61,7 +61,7 @@ public class ParkingControllerTest {
         ClassPathResource expectedResultPath = new ClassPathResource(expectedResponse, this.getClass().getClassLoader());
         String expectedResult = StreamUtils.copyToString( expectedResultPath.getInputStream(), Charset.defaultCharset());
 
-        String uri = "/parking/list";
+        String uri = "/parkings";
 
         mockMvc.perform(get(uri))
                 /*.andDo(print())*/
@@ -75,7 +75,7 @@ public class ParkingControllerTest {
     public void shouldThrowUnavailableServiceException_ParkingListCase() throws Exception {
         Mockito.when(restTemplate.getForObject(anyString(),any())).thenReturn(null);
 
-        String uri = "/parking/list";
+        String uri = "/parkings";
 
         MvcResult mvcResult = mockMvc.perform(get(uri))
                 /*.andDo(print())*/
@@ -88,7 +88,7 @@ public class ParkingControllerTest {
     }
 
     // -------------------------------------
-    // Tests cases : GET /parking/{id}
+    // Tests cases : GET /parkings/{id}
     // -------------------------------------
 
     @Test
@@ -97,7 +97,7 @@ public class ParkingControllerTest {
         response.getRecords().subList(1, response.getRecords().size()).clear();
         Mockito.when(restTemplate.getForObject(anyString(), any())).thenReturn(response);
 
-        String uri = "/parking/310";
+        String uri = "/parkings/310";
 
         mockMvc.perform(get(uri))
                 /*.andDo(print())**/
@@ -126,7 +126,7 @@ public class ParkingControllerTest {
         response.getRecords().clear();
         Mockito.when(restTemplate.getForObject(anyString(), any())).thenReturn(response);
 
-        String uri = "/parking/310";
+        String uri = "/parkings/310";
 
         MvcResult mvcResult = mockMvc.perform(get(uri))
                 /*.andDo(print())**/
@@ -141,7 +141,7 @@ public class ParkingControllerTest {
     public void shouldThrowUnavailableServiceException_ParkingByIdCase() throws Exception {
         Mockito.when(restTemplate.getForObject(anyString(), any())).thenReturn(null);
 
-        String uri = "/parking/310";
+        String uri = "/parkings/310";
 
         MvcResult mvcResult = mockMvc.perform(get(uri))
                 /*.andDo(print())**/

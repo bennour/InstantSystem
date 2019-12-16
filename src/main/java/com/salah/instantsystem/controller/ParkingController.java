@@ -18,14 +18,14 @@ import static com.salah.instantsystem.constant.Constant.SORT_ASC;
 import static com.salah.instantsystem.constant.Constant.SORT_DSC;
 
 @RestController
-@RequestMapping("/parking")
+@RequestMapping("/parkings")
 @Api("Parking resource API")
 public class ParkingController {
 
     @Autowired
     private ParkingService parkingService;
 
-    @GetMapping("/list")
+    @GetMapping()
     @ApiOperation(value = "Get parking list")
     public List<ParkingVM> getParkingList(@RequestParam Optional<String> sort,
                                           @RequestParam Optional<String> sortBy,
