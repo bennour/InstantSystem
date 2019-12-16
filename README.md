@@ -92,6 +92,10 @@ Utiliser swagger à l’adresse suivante :  [http:localhost:8080/swagger-ui.html
 * [Maven](https://maven.apache.org/) - Dependency Management
 * AspectJ - Aspect Oriented Programming
 
-## Author
+## Temps
+
+Durée total réalisation (projet + document) : 6h
+
+## Auteur
 
 * **Salah BENNOUR** 
