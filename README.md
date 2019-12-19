@@ -57,7 +57,7 @@ Pour la réalisation de ce projet, j’ai opté pour une architecture n-tiers av
 1.  L’utilisateur devrait renseigner sa positions GPS (longitude; latitude) afin qu’il puisse consulter les parkings autour de lui. Il pourrait par ailleurs ajouter un rayon de recherche maximal.
     
     **Example** : Un utilisateur situé à la position GPS (4.1215; 1.2135) et qui souhaite afficher les parkings autour de lui dans un rayon de 1km.  
-**/parking/list?long=4.1215&lat=1.2135&radius=1000**
+**/parkings?long=4.1215&lat=1.2135&radius=1000**
 
 2.  L’application est monolithique pour des raisons de productivité mais on pourrait envisager de rendre le projet multimodulaire avec, par exemple, le package client Rest à part. Cela permettrait également de pouvoir switcher d’implémentation facilement comme précisé précédemment.
     
