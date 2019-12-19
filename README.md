@@ -22,13 +22,13 @@ Il est par ailleurs possible de filtrer et/ou trier la liste selon certains crit
 -   **/parkings?sort=X&sortby=Y**  
 Permet de trier la liste de manière X (=ASC ou DSC) selon l’attribut Y
 
--   **/parking?onlyOpened=true**  
+-   **/parkings?onlyOpened=true**  
 N’affiche que les parkings actuellement ouverts
     
--   **/parking/list?minFree=X**  
+-   **/parkings?minFree=X**  
     N’affiche que les parkings ayant au minimum X places de disponible
     
--   **/parking/list?maxPrice=X&duration=Y**  
+-   **/parkings?maxPrice=X&duration=Y**  
     N’affiche que les parkings offrant un prix maximum X pour une durée Y
     
 ### GET - /parkings/{id}
